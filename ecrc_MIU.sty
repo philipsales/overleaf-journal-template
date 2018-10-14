@@ -76,6 +76,7 @@
     \mbox{\footnotesize\@journalname~xx~(xxxx)~xxx-xxx}%
     }}
 
+%WITH JOURNAL VOLUME
 \def\volume#1{\gdef\@vol{#1}}
 \def\firstpage#1{\gdef\@firstpage{#1}%
                   \setcounter{page}{#1}}
@@ -107,9 +108,25 @@
        \BottomRule%
 }}
 
-\def\elslogo{\includegraphics{elsevier-logo-\jtype p.pdf}}
-\def\sdlogo{\includegraphics{SDlogo-\jtype p.pdf}}
-\def\jnllogo{\includegraphics{\@jid logo.pdf}}
+
+% WITH JOURNAL LOGOS
+%\def\elslogo{\includegraphics{elsevier-logo-\jtype p.pdf}}
+%\def\sdlogo{\includegraphics{SDlogo-\jtype p.pdf}}
+%\def\jnllogo{\includegraphics{\@jid logo.pdf}}
+
+% WITHOUT JOURNAL LOGOS
+\newcommand{\noimage}{%
+  \setlength{\fboxsep}{-\fboxrule}%
+  {\phantom{\rule{80pt}{20pt}}}% Framed box
+}
+
+\def\elslogo{\noimage}
+\def\sdlogo{\noimage}
+\def\jnllogo{\noimage}
+
+%\def\elslogo{}
+%\def\sdlogo{}
+%\def\jnllogo{}
 %\def\jnllogo{\IfFileExists{\@jid logo.pdf}%
 %   {
 %   \includegraphics{\@jid logo.pdf}
@@ -125,7 +142,8 @@
 
 \def\ps@pprintTitle{%
     \def\@evenhead{%% Even head
-      \setbox1=\hbox{\elslogo}%
+      %\setbox1=\hbox{\elslogo}%
+      \setbox1=\hbox{\noimage}%
       \setbox2=\hbox{\sdlogo}%
       \setbox3=\hbox{\jnllogo}%
 %      \@tempdima=\textwidth\relax%
@@ -147,7 +165,10 @@
 
  \parbox[t]{25mm} {\centering%
        \raisebox{9pt}{\jnllogo}\\[-10pt]
-       \mbox{\scriptsize www.elsevier.es/RIAI}}
+       %JOURNAL LOGO label
+       %\mbox{\scriptsize www.elsevier.es/RIAI}}
+       %WITHOUT JOURNAL LOGO label
+       \mbox{\scriptsize}}
 
    }
        \let\@oddhead\@evenhead%
