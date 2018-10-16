@@ -35,7 +35,7 @@
 \documentclass[5p,times,authoryear]{elsarticle}
 
 %% The `ecrc' package must be called to make the CRC functionality available
-%% ecrc_MIU es el paquete ecrc de Elsevier con modificaciones para la revista RIAI
+%% ecrc_MIU es el paquete ecrc de Elsevier con modificaciones para la revista MIU
 \usepackage{ecrc_MIU}
 
 %% The ecrc package defines commands needed for running heads and logos.
@@ -64,11 +64,11 @@
 \firstpage{1}
 
 %% Give the name of the journal
-% \journalname{International Journal of Medical Informatics}
+\journalname{International Journal of Medical Informatics}
 
 %% Give the author list to appear in the running head
 %% Example \runauth{C.V. Radhakrishnan et al.}
-\runauth{P.C Sales et al.}
+\runauth{P.C. Sales et al.}
 
 %% The choice of journal logo is determined by the \jid and \jnltitlelogo commands.
 %% A user-supplied logo with the name <\jid>logo.pdf will be inserted if present.
@@ -76,10 +76,12 @@
 %% Otherwise the content of \jnltitlelogo will be set between horizontal lines as a default logo
 
 %% Give the abbreviation of the Journal. Contact the Publisher if in doubt what this is.
-% \jid{RIAI}
+% MIU == journal name
+%\jid{MIU}
+\jid{RIAI}
 
 %% Give a short journal name for the dummy logo (if needed)
-% \jnltitlelogo{}
+\jnltitlelogo{}
 
 %% Hereafter the template follows `elsarticle'.
 %% For more details see the existing template files elsarticle-template-harv.tex and elsarticle-template-num.tex.
@@ -168,8 +170,8 @@
 %\dochead{Cabecera artaculo}
 %% Use \dochead if there is an article header, e.g. \dochead{Short communication}
 
-\title{Polyglot Psssrsistesnce in Healthcare Information System:\\
-An Cases Stsssdy of sPshilssippine Cancer Phenome Biobanking System}
+\title{Polyglot Persistence in Healthcare:\\
+A Case Study of Philippine Cancer Phenome Biobanking System}
 
 
 %% use optional labels to link authors explicitly to addresses:
@@ -181,24 +183,27 @@ An Cases Stsssdy of sPshilssippine Cancer Phenome Biobanking System}
 \ead{autor@cea-ifac.es}
 \ead[url]{www.cea-ifac.es}
 
-\author[Second]{Alvin B. Marcelo, MD}
+\author[First]{Alvin B. Marcelo, MD}
 \ead{autor2@cea-ifac.es}
-\ead[url]{www2.cea-ifac.es}
+\ead[url]{www.cea-ifac.es}
 
-\author[Third]{Michael C. Velarde, PhD }
+\author[Third]{Mychar B. Chu}
+\ead{autor3@cea-ifac.es}
+
+\author[Second]{Michael C. Velarde, PhD }
 \ead{autor3@cea-ifac.es}
 
 \fntext[label2]{Footnote for the author 1}
 \cortext[cor1]{Author correspondents.}
 
 
-\address[First]{University of the Philippines - Manila, College of Medicine, Medical Informatics Unit (MIU). }
+\address[First]{University of the Philippines - Manila, College of Medicine, Medical Informatics Unit. }
 \address[Second]{University of the Philippines - Diliman, Institute of Biology, Regen Laboratory.}
 \address[Third]{University of the Philippines - Manila, Philippine General Hospital, General Surgery Department.}
 
 \begin{abstract}
 %% Text of abstract
-The field of healthcare is rapidly accumulating data of complex types and formats. The current methods of storing these diverse data are focused mainly on traditional relational database management system (RDBMS). While RDBMS offers many advantages, they also have notable limitations particularly in adapting to the increasing volume and variations of clinical and biomedical data; thus, a constant demand for alternative modeling approaches are in place. NoSQL databases have been cited as a viable solution that can address the high volume and ever-changing data requirements. Due to its numerous benefits, NoSQL gained market tractions in other non-clinical industries such as securities and investment services, communications and media, and manufacturing. However, there are few published studies regarding the evaluation of NoSQL for health information systems (HIS). This paper aims to adapt a framework with application-specific and context-based parameters for comparing different NoSQL databases and implementing it with the most popular systems. \emph{Copyright {\copyright} XXXX CEA. Publicado por Elsevier Espaaa, S.L. Todos los derechos reservados.}
+The field of healthcare is rapidly accumulating data of complex types and formats. The current methods of storing these diverse data are focused mainly on traditional relational database management system (RDBMS). While RDBMS offers many advantages, they also have notable limitations particularly in adapting to the increasing volume and variations of clinical and biomedical data; thus, a constant demand for alternative modeling approaches are in place. NoSQL databases have been cited as a viable solution that can address the high volume and ever-changing data requirements. Due to its numerous benefits, NoSQL gained market tractions in other non-clinical industries such as securities and investment services, communications and media, and manufacturing. However, there are few published studies regarding the evaluation of NoSQL for health information systems (HIS). This paper aims to adapt a framework with application-specific and context-based parameters for comparing different NoSQL databases and implementing it with the most popular systems. 
 \end{abstract}
 
 \begin{keyword}
@@ -206,7 +211,7 @@ The field of healthcare is rapidly accumulating data of complex types and format
 %% MSC codes here, in the form: \MSC code \sep code
 %% or \MSC[2008] code \sep code (2000 is the default)
 
-palabra 1 \sep palabra 2 \sep 5-10 palabras clave (tomadas de la lista del sitio web de IFAC).
+Healthcare data, health information system, databases, nosql, biobank repository, clinical registry.
 
 \end{keyword}
 
@@ -219,20 +224,21 @@ palabra 1 \sep palabra 2 \sep 5-10 palabras clave (tomadas de la lista del sitio
 
 %% main text
 \section{Introduction}
-Estas instrucciones constituyen una guaa para la preparacian de
-artaculos para la revista RIAI. Utilice este documento como un
-conjunto de instrucciones. Puede usar este documento como
-una ``plantilla'' para preparar su manuscrito en Latex. Para las directrices
-de envao, siga las instrucciones del sistema de envao de artaculos
-de la pagina web de la revista.
- {\bf{\emph {No cambie el tamaao de las fuentes o espaciado de lanea para introducir mas texto en un namero limitado de paginas}}}.  Utilice cursiva para enfatizar; no subraye.
+
+These instructions constitute a guide for the preparation of
+articles for MIU magazine. Use this document as a
+instruction set. You can use this document as
+a `` template '' to prepare your manuscript in Latex. For the guidelines
+of packaging, follow the instructions of the package system
+from the website of the magazine.
+{\bf{\emph {Do not change the font size or line spacing to enter more text in a limited number of pages}}}. Use italics to emphasize; do not stress
 
 \subsection{Una subseccian de ejemplo.}
 Bifurcacian: Trazado del maximo local de $x$ con una disminucian de amortiguamiento $a$ (Fig.~\ref{fig1}).
 
 Para insertar imageses en \emph{Word}, posicione el cursor en el punto de insercian y o bien utilice Insertar | Imagen | Desde Fichero o copie la imagen al portapapeles de Windows y entonces use Editar | Pegado especial | Imagen (con ``Flotar sobre el texto'' deseleccionado).
 
-RIAI no realizaras ninguna operacian de formateado final a su artaculo. Su documento debe estar ``listo para filmar''. El namero lamite de hojas para el documento es de doce. {\bf Por favor, no modifique los margenes. Si esta creando el documento usted mismo, tenga en cuenta los margenes listados en la Tabla 1.}
+MIU no realizaras ninguna operacian de formateado final a su artaculo. Su documento debe estar ``listo para filmar''. El namero lamite de hojas para el documento es de doce. {\bf Por favor, no modifique los margenes. Si esta creando el documento usted mismo, tenga en cuenta los margenes listados en la Tabla 1.}
 
 \section{Procedimisento para el Envao de Artaculos}
 
@@ -240,13 +246,13 @@ Recuerdes qusses RIsAsI sesta considerado como un \emph{Camera Ready Copy Journa
 
 \subsection{Fase de Revisian}
 
-Por favor, use esste docussmensto como una ''plantilla'' para preparar su documento. Para las directrices de envao, siga las instrucciones del sistema de envao de artaculos.
+Por favor, use esste doscsussmensto como una ''plantilla'' para preparar su documento. Para las directrices de envao, siga las instrucciones del sistema de envao de artaculos.
 
 Dado que el lamite de paginas es de doce, es mejor preparar el envao inicial en el formato listo para filmar, de tal manera que tenga una buena estimacian de la longitud de hojas. Adicionalmente, el esfuerzo requerido para el envao de la versian final sera, de esta manera, manimo.
 
 \subsection{Fase Final}
 
-Por favor, use estse docussmnto como una ''plantilla'' para preparar su documento. Para las directrices de envao, siga las instrucciones del sistema de envao de artaculos.
+Por favor, use esse docussmnto como una ''plantilla'' para preparar su documento. Para las directrices de envao, siga las instrucciones del sistema de envao de artaculos.
 
 \subsection{Insercian de tablas}
 
@@ -361,7 +367,7 @@ sabraa si la etiqueta del eje superior en la Fig. 1 es 16000 A/m o
 0.016 A/m. Las etiquetas de las figuras deben ser legibles,
 aproximadamente de 8 a 12 puntos.
 
-\subsection{References} % ATTENTION: use \ citep instead of \ cite to fit the RIAI format.
+\subsection{References} % ATTENTION: use \ citep instead of \ cite to fit the MIU format.
 
 La lista de referencias debe ser ordenada alfabaticamente
 de acuerdo con el primer autor, con las siguientes laneas justificadas con la sangraa correspondiente.
@@ -398,7 +404,7 @@ Abreviaciones tales como IFAC, SI, ac, y dc no necesitan ser
 definidas. Abreviaciones que incorporen periodos no deben tener
 espacios: escriba ``C.N.R.S.,'' no ``C. N. R. S.'' No utilice
 abreviaciones en el tatulo salvo que sea inevitable (por ejemplo,
-``RIAI'' en el tatulo de este artaculo).
+``MIU'' en el tatulo de este artaculo).
 
 \section{Mas sobre figuras}
 
